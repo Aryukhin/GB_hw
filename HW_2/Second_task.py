@@ -22,7 +22,8 @@ for i in range(len(lst)):
         if len(lst[i]) < 2:
             lst[i] = "'0" + lst[i] + "'"
     if lst[i][0] == "+" or lst[i][0] == "-":
-        lst[i] = "'" + lst[i][0] + "0" + lst[i][1] + "'"
+        if len(lst[i]) < 3:
+            lst[i] = "'" + lst[i][0] + "0" + lst[i][1] + "'"
 
-msg = " ".join(lst)
-print(msg)
+
+print(" ".join(lst))
