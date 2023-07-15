@@ -3,6 +3,10 @@
 '''
 
 def gen_odd_num(n):
-    res = [i for i in range(1, n + 1, 2)]
+    res = (i for i in range(1, n + 1, 2))
     return res
-print(gen_odd_num(100))
+test = gen_odd_num(10)
+
+print(next(test))
+print(next(test))
+print(next(test))
